@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Аудио и Видео</h2>
+            <input type="file" id="audioFile" accept="audio/*">
+            <audio id="audioPlayer" controls>
+                Ваш браузер не поддерживает аудио.
+            </audio>
+            <input type="file" id="videoFile" accept="video/*">
+            <video id="videoPlayer" controls>
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+
+        <div class="section">
+            <h2>Рисование и Анимация на Canvas</h2>
+            <canvas id="myCanvas" width="300" height="300"></canvas>
+            <div class="controls">
+                <button onclick="startAnimation()">Запустить анимацию</button>
+                <button onclick="stopAnimation()">Остановить анимацию</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Загрузка и Обработка Изображений</h2>
+            <input type="file" id="imageUpload" accept="image/*">
+            <canvas id="imageCanvas" width="300" height="300"></canvas>
+            <div class="controls">
+                <div class="filters">
+                    <button onclick="applyFilter('invert')">Инвертировать</button>
+                    <button onclick="applyFilter('grayscale')">Ч/Б</button>
+                    <button onclick="applyFilter('sepia')">Сепия</button>
+                </div>
+                <button onclick="saveImage()">Сохранить изображение</button>
+            </div>
+            <h3>Рисование по Изображению</h3>
+            <input type="color" id="colorPicker" value="#000000">
+            <button onclick="activateEraser()">Ластик</button>
+            <button onclick="deactivateEraser()">Рисовать</button>
+        </div>
+    </div>
+
+<script src="./app.js"></script>
+</body>
+</html>
